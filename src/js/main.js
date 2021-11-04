@@ -54,6 +54,14 @@ if (!getCookie('tooltip')) {
         })
 
         setCookie('tooltip', true, {'max-age': 3600, secure: true});
+
+
+        setTimeout(() => {
+            $(function () {
+                $('.tooltip-show').tooltip('hide');
+            })
+        }, 20000)
+
     }, 30000)
 }
 
