@@ -46,3 +46,8 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
 
+setTimeout (() => {
+    $(function () {
+        $('.tooltip-show').tooltip('show');
+    })
+}, 30000)
