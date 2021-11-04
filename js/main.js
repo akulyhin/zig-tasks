@@ -53,7 +53,7 @@ if (!getCookie('tooltip')) {
             $('.tooltip-show').tooltip('show');
         })
 
-        setCookie('tooltip', true, {'max-age': 10800, secure: true});
+        setCookie('tooltip', true, {'max-age': 3600, secure: true});
     }, 30000)
 }
 
