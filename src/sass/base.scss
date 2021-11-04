@@ -120,6 +120,10 @@ header {
   transition: all .3s ease;
 }
 
+.navbar-left hr {
+  border-color: #6a6a6a;
+}
+
 .navbar-left.small {
   width: 50px;
 }
