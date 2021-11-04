@@ -56,3 +56,15 @@ if (!getCookie('tooltip')) {
         setCookie('tooltip', true, {'max-age': 10800, secure: true});
     }, 30000)
 }
+
+
+const menuLi = document.querySelectorAll('.menu li');
+
+menuLi.forEach(item => {
+    if (window.location.pathname !== '/zig-tasks/') {
+        item.classList.remove('active');
+        if (item.children[0].href, item.children[0].href.indexOf(window.location.pathname) !== -1) {
+            item.classList.add('active');
+        }
+    }
+})
