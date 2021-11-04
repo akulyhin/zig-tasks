@@ -46,8 +46,13 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
 
-setTimeout (() => {
-    $(function () {
-        $('.tooltip-show').tooltip('show');
-    })
-}, 30000)
+
+if (!getCookie('tooltip')) {
+    setTimeout (() => {
+        $(function () {
+            $('.tooltip-show').tooltip('show');
+        })
+
+        setCookie('tooltip', true, {'max-age': 10800});
+    }, 30000)
+}
