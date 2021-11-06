@@ -53,9 +53,12 @@
                     <label for="links">Ссылка на статью (статьи) в Google Docs</label>
                     <input type="text" class="form-control" name="link" id="links" placeholder="Введите ссылку на статью" autocomplete="off">
 
-                    <input type="checkbox" name="text" id="text" class="mt-3">
+                    <input type="checkbox" name="text" id="text" class="mt-3 mb-4">
                     <label for="text">Статья прошла проверку на text.ru</label>
                     <br>
+                    <label for="comment">Комментарий, если есть</label>
+                    <textarea name="comment" id="comment" cols="59" class="form-control" rows="5" placeholder="Введите комментарий, если необходимо"></textarea>
+
                     <input type="submit" class="btn btn-primary mt-4 form-submit" disabled value="Отправить">     
                 </form>
                 <div id="post_form_success"></div>
