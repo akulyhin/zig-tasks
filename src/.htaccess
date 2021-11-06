@@ -1,0 +1,5 @@
+Options +SymLinksIfOwnerMatch
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} akulyhin.githab.io/zig-tasks/
+RewriteRule (.*) https://[project.fabrikazig.com]/$1 [R=301,L]
