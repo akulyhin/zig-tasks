@@ -1,5 +1,7 @@
 const textCheckbox = document.getElementById('text');
 const link = document.getElementById('links');
+const addLink = document.querySelector('.add-link');
+const linksBlock = document.querySelector('.links-block');
 
 textCheckbox.addEventListener('click', (e) => {
   if (e.target.checked && link.value.length > 2) {
@@ -19,6 +21,13 @@ link.addEventListener('input', (e) => {
  else {
   document.querySelector('.form-submit').setAttribute('disabled', 'disabled');
  }
+})
+
+
+
+addLink.addEventListener('click', (e) => {
+  const link = '<input type="text" class="form-control mt-3" name="link[]" placeholder="Введите ссылку на статью" autocomplete="off">';
+  linksBlock.innerHTML = `${linksBlock.innerHTML}${link}`;
 })
 
 
