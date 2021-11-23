@@ -26,13 +26,8 @@ link.addEventListener('input', (e) => {
 
 
 addLink.addEventListener('click', (e) => {
- const link = document.createElement('input');
- link.classList.add('form-control', 'mt-3');
- link.setAttribute('type', 'text');
- link.setAttribute('name', 'link[]'),
- link.setAttribute('placeholder', 'Введите ссылку на статью');
- link.setAttribute('autocomplete', 'off');
- linksBlock.appendChild(link)
+  const link = '<input type="text" class="form-control mt-3" name="link[]" placeholder="Введите ссылку на статью" autocomplete="off">';
+  linksBlock.innerHTML = `${linksBlock.innerHTML}${link}`;
 })
 
 
