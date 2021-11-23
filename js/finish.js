@@ -1,10 +1,11 @@
 const textCheckbox = document.getElementById('text');
+const textCheckbox2 = document.getElementById('text2');
 const link = document.getElementById('links');
 const addLink = document.querySelector('.add-link');
 const linksBlock = document.querySelector('.links-block');
 
 textCheckbox.addEventListener('click', (e) => {
-  if (e.target.checked && link.value.length > 2) {
+  if (e.target.checked && textCheckbox2.checked && link.value.length > 2) {
     document.querySelector('.form-submit').removeAttribute('disabled');
   }
 
@@ -14,13 +15,24 @@ textCheckbox.addEventListener('click', (e) => {
 })
 
 link.addEventListener('input', (e) => {
- if (e.target.value.length > 2 && textCheckbox.checked) {
+ if (e.target.value.length > 2 && textCheckbox.checked && textCheckbox2.checked) {
   document.querySelector('.form-submit').removeAttribute('disabled');
  }
 
  else {
   document.querySelector('.form-submit').setAttribute('disabled', 'disabled');
  }
+})
+
+
+textCheckbox2.addEventListener('click', (e) => {
+  if (e.target.checked && textCheckbox.checked && link.value.length > 2) {
+    document.querySelector('.form-submit').removeAttribute('disabled');
+  }
+
+  else {
+    document.querySelector('.form-submit').setAttribute('disabled', 'disabled');
+  }
 })
 
 
